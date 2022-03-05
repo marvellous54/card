@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Outfit;
     overflow: hidden;
 }
 
@@ -14,8 +15,6 @@ section{
 }
 
 .container{
-    min-height: 80vh;
-    width: 45vh;
     background: linear-gradient(hsl(215, 32%, 27%), hsl(216, 50%, 16%));
     padding: 1.5em;
     border-radius: 1em;
@@ -26,10 +25,36 @@ section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 45vh;
-    width: 100%;
+    max-width: 18rem;
     border-radius: 0.5em;
     margin-bottom: 1em;
+}
+
+.img::before{
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-color: hsl(178, 100%, 50%);
+    display: none;
+    opacity: 0.5;
+    
+}
+
+#icon-view{
+    position: absolute;
+    display: none;
+}
+
+a:hover .img::before{
+    display: block;
+}
+
+a:hover #icon-view{
+    display: block;
 }
 
 .opacity{
@@ -42,7 +67,6 @@ section{
 }
 
 h2{
-    font-family: calibri;
     color: white;
     font-weight: 600;
     margin-bottom: 0.5em;
@@ -51,14 +75,15 @@ h2{
 .content{
     color: hsl(215, 51%, 70%);
     font-size: 18px;
+    max-width: 18rem;
     line-height: 1.5em;
-    font-family: calibri;
     margin-bottom: 0.5em;
 }
 
 .icons{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
 }
 
 .icon1, .icon2{
@@ -67,10 +92,8 @@ h2{
 
 .icon1 p{
     color: hsl(178, 100%, 50%);
-    font-family: calibri;
     font-size: 18px;
     line-height: 1.5em;
-    font-family: calibri;
     font-weight: 600;
 }
 
@@ -78,7 +101,6 @@ h2{
     color: hsl(215, 51%, 70%);
     font-size: 18px;
     line-height: 1.5em;
-    font-family: calibri;
 }
 
 svg{
@@ -87,12 +109,6 @@ svg{
     margin-left: 0;
     margin-bottom: 1em;
     opacity: 1;
-}
-
-.line{
-    width: 100%;
-    height: 0.1em;
-    background-color: hsl(215, 32%, 27%);
 }
 
 .footer{
@@ -121,13 +137,11 @@ svg{
 
 strong{
     color: hsl(215, 51%, 70%);
-    font-family: calibri;
     font-weight: 400;
 }
 
 .footer p{
     color: white;
-    font-family: calibri;
 }
 
 
